@@ -1,0 +1,38 @@
+<HTML>
+	<head>
+		<title>What shall it be Little Lynnie?</title>
+
+	</head>
+	<body>
+		<h3>Are you all in this marriage? Check your answer below</h3>
+		<h4 id="resp" style="color:blue"></h4>
+		<ul style=" list-style-type: none">
+			<li><input id="y" type="radio" name="answer" value="Yes">Yes</li>
+			<li><input id="n" type="radio" name="answer"  value="No">No</li>
+			<li><input id="uhh" type="radio" name="answer"  value="How long will you give me to think about it?">How long will you give me to think about it?</li>
+		</ul>
+		<button  id="btnSubmit" onclick="submit" name="Submit" value="Submit">Submit</button>
+		
+		<script type="text/javascript">
+		
+			var btn = document.getElementById("btnSubmit");
+			btn.addEventListener("click",submit);			
+			var y=document.getElementById("y");
+			var n=document.getElementById("n");
+			var uhh=document.getElementById("uhh");
+			var resp=document.getElementById("resp");
+			function submit(){				
+				console.log("clicked...");
+				if(y.checked){
+					resp.innerHTML="Yea, me too. Good choice, I love you so much. I have faith and hope enough for the both of us. What's mine is yours.";
+				}else if(n.checked){
+					resp.innerHTML="That sucks, your mouse must be broken... I think you ment to click something else.";
+				}else if(uhh.checked){
+					resp.innerHTML="A life time, but I think you should just commit now and make it easier for the both of us :) <3";
+				} 
+			};
+		</script>
+	</body>
+<HTML>
+			
+			
